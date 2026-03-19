@@ -437,7 +437,7 @@ def crew(
 def crew_eval(
     query: str = typer.Argument(..., help="Question to ask the crew"),
     model: str = typer.Option("llama3.2", "--model", "-m", help="Ollama model"),
-    top_k: int = typer.Option(5, "--top-k", "-k", help="Chunks to retrieve")
+    top_k: int = typer.Option(3, "--top-k", "-k", help="Chunks to retrieve")
 ):
     """
     Run a query through CrewAI and score the answer using
