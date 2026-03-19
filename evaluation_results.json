@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-03-15T15:05:52.157091",
+  "scores": {
+    "faithfulness": 0.333,
+    "answer_relevancy": 0.75,
+    "context_precision": 1.0,
+    "context_recall": 0.314
+  },
+  "num_tested": 2,
+  "details": [
+    {
+      "question": "What does the code in sample.py do?",
+      "answer": "The code snippet in sample.py is a Python function named \"fibonaci\" that returns the nth Fibonacci number using recursion. The base cases are \"0\" and \"1\", which correspond to the first two terms of the sequence. The function takes an integer parameter \"n\" as input, and returns the corresponding value.",
+      "contexts": [
+        "def binary_search(arr, target):\n    \"\"\"\n    Binary search on a sorted array.\n    Returns index of target or -1 if not found.\n    Time complexity: O(log n)\n    \"\"\"\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1\n\"@ | Out-File -FilePath documents\\sample.py -Encoding utf8",
+        "# PowerShell \u2014 creates the file\n@\"\ndef fibonacci(n):\n    \"\"\"\n    Returns the nth Fibonacci number using recursion.\n    Base cases: fibonacci(0) = 0, fibonacci(1) = 1\n    \"\"\"\n    if n <= 0:\n        return 0\n    elif n == 1:\n        return 1\n    return fibonacci(n - 1) + fibonacci(n - 2)"
+      ],
+      "ground_truth": "# PowerShell \u2014 creates the file\n@\"\ndef fibonacci(n):\n    \"\"\"\n    Returns the nth Fibonacci number using recursion.\n    Base cases: fibonacci(0) = 0, fibonacci(1) = 1\n    \"\"\"\n    if n <= 0:\n        return 0\n    elif n == 1:\n        return 1\n    return fibonacci(n - 1) + fibonacci(n - 2)"
+    },
+    {
+      "question": "What does the code in sample.py do?",
+      "answer": "The code snippet in sample.py is a Python function named \"fibonaci\" that returns the nth Fibonacci number using recursion. The base cases are \"0\" and \"1\", which correspond to the first two terms of the sequence. The function takes an integer parameter \"n\" as input, and returns the corresponding value.",
+      "contexts": [
+        "def binary_search(arr, target):\n    \"\"\"\n    Binary search on a sorted array.\n    Returns index of target or -1 if not found.\n    Time complexity: O(log n)\n    \"\"\"\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1\n\"@ | Out-File -FilePath documents\\sample.py -Encoding utf8",
+        "# PowerShell \u2014 creates the file\n@\"\ndef fibonacci(n):\n    \"\"\"\n    Returns the nth Fibonacci number using recursion.\n    Base cases: fibonacci(0) = 0, fibonacci(1) = 1\n    \"\"\"\n    if n <= 0:\n        return 0\n    elif n == 1:\n        return 1\n    return fibonacci(n - 1) + fibonacci(n - 2)"
+      ],
+      "ground_truth": "def binary_search(arr, target):\n    \"\"\"\n    Binary search on a sorted array.\n    Returns index of target or -1 if not found.\n    Time complexity: O(log n)\n    \"\"\"\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            r"
+    }
+  ]
+}
